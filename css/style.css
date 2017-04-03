@@ -43,7 +43,21 @@ a {
     text-decoration: none !important;
 }
 
-a:focus,a:hover {
+a:focus,
+a:hover {
     color: #23527c !important;
     text-decoration: underline !important;
+}
+
+#githubLogo {
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+}
+
+.logo-img {
+    height: 100px;
+    margin-right: 20px;
 }
