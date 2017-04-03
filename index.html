@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pagerank</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <!--<script src="js/jquery-3.1.1.min.js"></script>-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/d3.min.js"></script>
+</head>
+
+<body>
+    <div style="padding: 10px;">
+        <h1 style="padding: 10px">Pagerank Visualization</h1>
+        <h4>A visualization of the implementation of Google's core search engine algorithm --
+            <a href="https://en.wikipedia.org/wiki/PageRank" target="_blank">Pagerank</a> -- using <a href="https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html" target="_blank">Hadoop's HDFS</a> and <a href="https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html"
+                target="_blank">MapReduce</a> frameworks</h3>
+    </div>
+
+    <div class="content" id="content">
+        <form style="display: inline-flex">
+            <input type="text" class="form-control" style="width: 300px;margin: 0 auto;border-top-right-radius: 0px;border-bottom-right-radius: 0px;" name="query" id="query" placeholder="Enter a page ID between 1 - 6000" value="">
+            <button class="btn btn-success" style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;" type="submit">Search</button>
+        </form>
+        <i style="font-size: 30px;color: #5bc0de;position: relative;top: 10px;left: 10px;" class="glyphicon glyphicon-question-sign" data-toggle="popover" role="button" data-content="<ol>
+        <li>* Black node is the one selected</li>
+        <li>* Page ranking is represented by the number of edges connected to the page node</li>
+        <li>* Click a page node to view it</li>
+    </ol>"></i>
+    </div>
+
+    <svg width="1980" height="1080"></svg>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
